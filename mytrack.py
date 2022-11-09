@@ -302,25 +302,24 @@ def parse_opt():
    # parser.add_argument('--save-vid', action='store_true', help='save video tracking results')
    # parser.add_argument('--nosave', action='store_true', help='do not save images/videos')
     # class 0 is person, 1 is bycicle, 2 is car... 79 is oven
-    parser.add_argument('--classes', nargs='+', type=int, help='filter by class: --classes 0, or --classes 0 2 3')
-    parser.add_argument('--agnostic-nms', action='store_true', help='class-agnostic NMS')
-    parser.add_argument('--augment', action='store_true', help='augmented inference')
-    parser.add_argument('--visualize', action='store_true', help='visualize features')
-    parser.add_argument('--update', action='store_true', help='update all models')
+    # parser.add_argument('--classes', nargs='+', type=int, help='filter by class: --classes 0, or --classes 0 2 3')
+    # parser.add_argument('--agnostic-nms', action='store_true', help='class-agnostic NMS')
+    # parser.add_argument('--augment', action='store_true', help='augmented inference')
+    # parser.add_argument('--visualize', action='store_true', help='visualize features')
+    # parser.add_argument('--update', action='store_true', help='update all models')
    # parser.add_argument('--project', default=ROOT / 'runs/track', help='save results to project/name')
     #parser.add_argument('--name', default='exp', help='save results to project/name')
-    parser.add_argument('--exist-ok', action='store_true', help='existing project/name ok, do not increment')
-    parser.add_argument('--line-thickness', default=3, type=int, help='bounding box thickness (pixels)')
-    parser.add_argument('--hide-labels', default=False, action='store_true', help='hide labels')
-    parser.add_argument('--hide-conf', default=False, action='store_true', help='hide confidences')
-    parser.add_argument('--hide-class', default=False, action='store_true', help='hide IDs')
-    parser.add_argument('--half', action='store_true', help='use FP16 half-precision inference')
+    # parser.add_argument('--exist-ok', action='store_true', help='existing project/name ok, do not increment')
+    # parser.add_argument('--line-thickness', default=3, type=int, help='bounding box thickness (pixels)')
+    # parser.add_argument('--hide-labels', default=False, action='store_true', help='hide labels')
+    # parser.add_argument('--hide-conf', default=False, action='store_true', help='hide confidences')
+    # parser.add_argument('--hide-class', default=False, action='store_true', help='hide IDs')
+    # parser.add_argument('--half', action='store_true', help='use FP16 half-precision inference')
     parser.add_argument('--dnn', action='store_true', help='use OpenCV DNN for ONNX inference')
     opt = parser.parse_args()
-    imgsz *= 2 if len(imgsz) == 1 else 1  # expand
-
+    #imgsz *= 2 if len(imgsz) == 1 else 1  # expand
+    
     return opt
-
 
 def main(opt):
     check_requirements(requirements=ROOT / 'requirements.txt', exclude=('tensorboard', 'thop'))
